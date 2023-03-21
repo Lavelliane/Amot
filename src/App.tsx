@@ -1,9 +1,15 @@
-import { useState } from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { Login, Directories } from './pages'
 
 function App() {
 
   return (
-    <h1>Hello</h1>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/directories" element={<Directories />} />
+      </Routes> 
+    </BrowserRouter>
   )
 }
 
