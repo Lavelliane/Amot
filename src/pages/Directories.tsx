@@ -1,7 +1,12 @@
+import { Button } from "../components";
+import { useAuth } from "../context/AuthContext"
 
 function Directories() {
+  const {logout} = useAuth();
   return (
-    <div>Directories</div>
+    <div>
+        <button onClick={() => logout()}>Logout</button>
+    </div>
   )
 }
 
