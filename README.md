@@ -15,7 +15,7 @@ To get started, clone this repository and install the dependencies using `npm` o
 ```bash
 git clone https://github.com/your-username/Amot.git
 
-cd amot
+cd Amot
 
 npm install # or yarn install
 ```
