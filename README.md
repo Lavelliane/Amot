@@ -13,9 +13,9 @@ a certain person's "amot" or contribution when you have a trip or when the group
 To get started, clone this repository and install the dependencies using `npm` or `yarn`.
 
 ```bash
-git clone https://github.com/your-username/amot.git
+git clone https://github.com/your-username/Amot.git
 
-cd amot
+cd Amot
 
 npm install # or yarn install
 ```
