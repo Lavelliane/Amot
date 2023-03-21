@@ -22,7 +22,7 @@ function Login() {
     if (user || Object.keys(user).length !== 0) {
       navigate('/directories');
     }
-  
+
 
   return (
     <Wrapper>
