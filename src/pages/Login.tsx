@@ -1,6 +1,7 @@
 import LoginImg from '../assets/images/amot-login.png';
 import  Wrapper  from '../wrappers/LoginWrapper'
 import { Button } from '../components'
+import GoogleButton from 'react-google-button'
 import { useAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom'
 import { useEffect } from 'react';
@@ -29,7 +30,10 @@ function Login() {
         <div>
           <img src={LoginImg} alt="login-img" />
         </div>
-       <Button text={"Login with Google"} onClick={handleClick}/>
+       <GoogleButton onClick={() => handleClick()} type="dark" label='Amot na dol!' style={{marginLeft: 20}}/>
+       <footer>
+        <p>Copyright © 2023 CpE Gwapo</p>
+       </footer>
     </Wrapper>
   )
 }

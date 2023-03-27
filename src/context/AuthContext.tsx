@@ -11,34 +11,36 @@ import {
   signInWithPopup,
   signInWithRedirect,
 } from "firebase/auth";
-import { auth, provider } from "../firebase-config";
+import { auth, db, provider } from "../firebase-config";
+import { setDoc, doc } from "firebase/firestore";
 
 const AuthContext = createContext<any>({});
 
 export const AuthContextProvider = ({ children }: { children: ReactNode }) => {
-
   const [user, setUser] = useState({});
 
-  function googleSignIn () {
+  function googleSignIn() {
     signInWithPopup(auth, provider);
-  };
-  
+  }
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       if (currentUser) {
         setUser(currentUser);
-        console.log(currentUser)
+        setDoc(doc(db, "users", currentUser.uid), {
+          displayName: currentUser.displayName,
+          email: currentUser.email,
+        })
+          .then((response) => console.log(response))
+          .catch((error) => console.error(error));
       }
-      return () => unsubscribe()
+      return () => unsubscribe();
     });
-  }, [])
+  }, []);
 
   const logout = async () => {
-    await signOut(auth)
-  }
-
-    
+    await signOut(auth);
+  };
 
   return (
     <AuthContext.Provider value={{ googleSignIn, logout, user }}>

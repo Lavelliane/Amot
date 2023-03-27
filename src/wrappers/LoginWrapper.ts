@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { Button } from '../components';
 
 const Wrapper = styled.div`
   position: absolute;
@@ -8,12 +7,17 @@ const Wrapper = styled.div`
   transform: translate(-50%, -50%);
   
   img {
-    margin: 0 auto;
+    margin-bottom:20px;
   }
-  Button {
-    margin-left: 20px;
-    margin-top: 30px;
+  
+  footer {
+    font-size: 1rem;
+    margin-top: 70px;
+    margin-right: 20px;
+    color: var(--grey-500);
+    text-align: center;
   }
+  
 
 `
 export default Wrapper;

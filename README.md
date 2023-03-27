@@ -1,7 +1,7 @@
 # Amot.ph
 
 ### Contributors
-* Johnfil Initan - 
+* Johnfil Initan - https://github.com/Liveir
 * Jhury Lastre - https://github.com/Lavelliane
 * Vince Abella - https://github.com/roastedbeans
 
