@@ -1,4 +1,8 @@
 import styled from 'styled-components'
+<<<<<<< HEAD
+=======
+import { Button } from '../components';
+>>>>>>> 1a4509e5c2ddcea83c2e0e9054e1a26fa151ad7e
 
 const Wrapper = styled.div`
   position: absolute;
@@ -7,6 +11,7 @@ const Wrapper = styled.div`
   transform: translate(-50%, -50%);
   
   img {
+<<<<<<< HEAD
     margin-bottom:20px;
   }
   
@@ -18,6 +23,14 @@ const Wrapper = styled.div`
     text-align: center;
   }
   
+=======
+    margin: 0 auto;
+  }
+  Button {
+    margin-left: 20px;
+    margin-top: 30px;
+  }
+>>>>>>> 1a4509e5c2ddcea83c2e0e9054e1a26fa151ad7e
 
 `
 export default Wrapper;
