@@ -5,6 +5,7 @@ import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebase-config";
 import { useEffect, useState } from "react";
 import { Tracker } from '../types';
+import { HomePage } from "./HomePage";
 import uniqid from 'uniqid';
 
 function Directories() {  
@@ -26,25 +27,15 @@ function Directories() {
     navigate("/");
   }
 
-  async function goToHomepage() {
-    navigate("/homepage");
-  }
-
   useEffect(() => {
     getTrackers();
   }, [])
 
-  console.log(trackers)
   return (
     <div>
-        <Button text={"Logout"} onClick={() => handleSignOut()} />
-        <button onClick={() => goToHomepage()}>New</button>
-        <div className="container">
-        {trackers.length !== 0 && trackers.map((tracker: Tracker) => (
-            <Card date={tracker.date} eventName={tracker.eventName} place={tracker.place} total={tracker.total} key={uniqid()}/>
-        ))}
-        </div> 
-    </div>
+      <HomePage />
+      <Button text={"Logout"} onClick={() => handleSignOut()} />
+    </div> 
   );
 }
 

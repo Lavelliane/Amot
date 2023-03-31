@@ -3,7 +3,7 @@ import Cards from "../components/Cards";
 import Bottom from "../components/Bottom";
 import Wrapper from "../wrappers/HomepageWrapper";
 
-function Homepage() {
+export const HomePage = () => {
   return (
     <Wrapper>
       <div className="App">
@@ -21,7 +21,7 @@ function Homepage() {
         <Bottom />
       </div>
     </Wrapper>
-  )
-}
+  );
+};
 
-export default Homepage;
+export default HomePage;
